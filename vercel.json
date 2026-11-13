@@ -1,0 +1,56 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/commercial-cylinder",
+      "destination": "/services/commercial-cylinder/",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-cylinder/",
+      "destination": "/services/commercial-cylinder/",
+      "permanent": true
+    },
+    {
+      "source": "/connection-sets",
+      "destination": "/services/connection-sets/",
+      "permanent": true
+    },
+    {
+      "source": "/connection-sets/",
+      "destination": "/services/connection-sets/",
+      "permanent": true
+    },
+    {
+      "source": "/cylinder-refill",
+      "destination": "/services/cylinder-refill/",
+      "permanent": true
+    },
+    {
+      "source": "/cylinder-refill/",
+      "destination": "/services/cylinder-refill/",
+      "permanent": true
+    },
+    {
+      "source": "/gas-accessories",
+      "destination": "/services/gas-accessories/",
+      "permanent": true
+    },
+    {
+      "source": "/gas-accessories/",
+      "destination": "/services/gas-accessories/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*).webp",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
