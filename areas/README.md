@@ -1,0 +1,29 @@
+# Shyam Gas website: one template, many area pages
+
+You never write an HTML file per area. Everything comes from:
+- `data/areas.json`   one entry per area (name, group, paragraphs, landmarks, apartments, faqs)
+- `data/services.json` one entry per service page
+- `templates/page.html` the single page layout
+- `site.config.json`  phone, address, domain, Google profile link, map coordinates
+- `public/`           your home page (index.html), styles.css, logo, images
+
+`node build.mjs` writes the finished site to `dist/` (one real HTML page per URL, plus sitemap.xml and robots.txt).
+On Vercel this runs automatically (see vercel.json): push to GitHub, Vercel rebuilds.
+
+## Add a new area
+Add an entry to `data/areas.json`, e.g.
+{ "slug": "yelahanka-new-town", "name": "Yelahanka New Town", "group": "North", "tier": "sameday",
+  "paragraphs": ["Real, specific text about this area...", "Second paragraph..."],
+  "landmarks": "real landmarks", "apartments": ["Community names you serve"] }
+Commit and push. The page, its links, and its sitemap entry are created automatically.
+
+## Thin pages
+Area pages under 150 words are automatically set to `noindex` and left out of the sitemap, because many near-identical pages hurt rankings.
+Add real, specific content (photos, landmarks, communities you serve, real customer comments with permission) and the page is indexed on the next build.
+Use "forceIndex": true to override.
+
+## Before launch
+1. Set `siteUrl` in site.config.json (or SITE_URL env var in Vercel) to your real domain. Also update canonical/og:url in public/index.html.
+2. Add your office coordinates: `"geo": {"lat": ..., "lng": ...}` (right-click your office on Google Maps).
+3. Add Facebook/Instagram links to `sameAs` when they exist.
+4. Submit /sitemap.xml in Google Search Console.

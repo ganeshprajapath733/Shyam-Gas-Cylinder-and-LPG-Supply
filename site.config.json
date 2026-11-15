@@ -1,0 +1,13 @@
+{
+  "siteUrl": "https://shyam-gas-cylinder-and-lpg-supply.vercel.app",
+  "name": "Shyam Gas Cylinder and LPG Supply",
+  "shortName": "Shyam Gas",
+  "phone": "+917483222174",
+  "phoneDisplay": "+91 74832 22174",
+  "email": "cylinderlpggas@gmail.com",
+  "address": { "street": "84, Budigere Main Rd, Bagaluru", "city": "Bengaluru", "region": "Karnataka", "postcode": "562149" },
+  "hours": "9 AM to 9 PM",
+  "googleProfileUrl": "https://share.google/uAIpJXVX68go4Jbsz",
+  "geo": { "lat": null, "lng": null },
+  "sameAs": []
+}
